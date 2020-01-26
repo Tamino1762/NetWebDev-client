@@ -13,32 +13,50 @@
 
 <body>
 <!-- navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <a class="navbar-brand" href="#"><i class="far fa-compass"></i> Northwind</a>
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Products
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="productDropdown">
-                        <a class="dropdown-item" href="#">Browse Categories</a>
-                        <a class="dropdown-item" href="#">Product Search</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Current Discounts</a>
-                    </div>
-                </li>
-            </ul>
-            <form class="form-inline ml-auto">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search Products" aria-label="Search">
-                <button class="btn btn-danger my-2 my-sm-0" type="submit"><i class="fas fa-search"></i><span class="sr-only">Search</span></button>
-            </form>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a class="navbar-brand" href="#"><i class="far fa-compass"></i> Northwind</a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-shopping-basket"></i> Products
+            </a>
+            <div class="dropdown-menu" aria-labelledby="productDropdown">
+                <a class="dropdown-item" href="#"><i class="fas fa-table"></i> Browse Categories</a>
+                <a class="dropdown-item" href="#"><i class="fas fa-search"></i> Product Search</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#"><i class="fas fa-hand-holding-usd"></i> Current Discounts</a>
+            </div>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user-friends"></i> Customers
+                </a>
+                <div class="dropdown-menu" aria-labelledby="productDropdown">
+                    <a class="dropdown-item" href="#"><i class="fas fa-receipt"></i> Account</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-cash-register"></i> Register</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+                </div>
+            </li>
+        </ul>
+        <form class="form-inline ml-auto">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search Products" aria-label="Search">
+            <button class="btn btn-danger my-2 my-sm-0" type="submit"><i class="fas fa-search"></i><span class="sr-only">Search</span></button>
+        </form>
+    </div>
+</nav>
+<div class="container-fluid">
+        <div class="jumbotron">
+            <h1 class="display-4">Northwind</h1>
+            <p class="lead">We have the best prices and selection of high quality foods and beverages on the planet! Check out our featured discounts below!</p>
+            <hr class="my-4">
+            <p>For spectacular international cuisine, look no further!</p>
+            <a class="btn btn-outline-success" href="#" role="button">Order Now! <i class="fas fa-arrow-right"></i></a>
         </div>
-    </nav>
-
+    </div>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
