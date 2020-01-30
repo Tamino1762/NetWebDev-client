@@ -9,52 +9,93 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-</head>
+    <link rel="stylesheet" href="css/StyleSheet.css"/>
+    </head>
 
 <body>
-<!-- navbar -->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <a class="navbar-brand" href="#"><i class="far fa-compass"></i> Northwind</a>
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-shopping-basket"></i> Products
-            </a>
-            <div class="dropdown-menu" aria-labelledby="productDropdown">
-                <a class="dropdown-item" href="#"><i class="fas fa-table"></i> Browse Categories</a>
-                <a class="dropdown-item" href="#"><i class="fas fa-search"></i> Product Search</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><i class="fas fa-hand-holding-usd"></i> Current Discounts</a>
-            </div>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-user-friends"></i> Customers
-                </a>
-                <div class="dropdown-menu" aria-labelledby="productDropdown">
-                    <a class="dropdown-item" href="#"><i class="fas fa-receipt"></i> Account</a>
-                    <a class="dropdown-item" href="#"><i class="fas fa-cash-register"></i> Register</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#"><i class="fas fa-sign-in-alt"></i> Sign In</a>
-                </div>
-            </li>
-        </ul>
-        <form class="form-inline ml-auto">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search Products" aria-label="Search">
-            <button class="btn btn-danger my-2 my-sm-0" type="submit"><i class="fas fa-search"></i><span class="sr-only">Search</span></button>
-        </form>
+    <!-- toast -->
+    <div id="toast" class="toast">
+        <div class="toast-header">
+            <strong class="mr-auto" id="product">Product Name</strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body">
+            Discount Code: <strong id="code">CODE</strong>
+        </div>
     </div>
-</nav>
-<div class="container-fluid">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <a class="navbar-brand" href="#"><i class="far fa-compass"></i> Northwind</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-shopping-basket"></i> Products
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="productDropdown">
+                        <a class="dropdown-item" href="#"><i class="fas fa-table"></i> Browse Categories</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-search"></i> Product Search</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="fas fa-hand-holding-usd"></i> Current Discounts</a>
+                    </div>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user-friends"></i> Customers
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="productDropdown">
+                        <a class="dropdown-item" href="#"><i class="fas fa-receipt"></i> Account</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-cash-register"></i> Register</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline ml-auto">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search Products" aria-label="Search">
+                <button class="btn btn-danger my-2 my-sm-0" type="submit"><i class="fas fa-search"></i><span class="sr-only">Search</span></button>
+            </form>
+        </div>
+    </nav>
+    <div class="container-fluid">
         <div class="jumbotron">
             <h1 class="display-4">Northwind</h1>
             <p class="lead">We have the best prices and selection of high quality foods and beverages on the planet! Check out our featured discounts below!</p>
             <hr class="my-4">
             <p>For spectacular international cuisine, look no further!</p>
             <a class="btn btn-outline-success" href="#" role="button">Order Now! <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <!-- grid -->
+    <div class="row">
+        <div class="col-md m-3 p-3 discounts">
+            <h3>Tis the seasoning</h3>
+            <div class="mb-4">
+                Order today! Save 12.5% on Chef Anton's Italian Seasoning.
+                You don't want to make Chef Anton mad, do you?
+            </div>
+            <i>Discount expires: 2/25/2020</i><br />
+            <a href="#" class="code"><i class="far fa-hand-point-right"></i> Discount Code</a>
+        </div>
+        <div class="col-md m-3 p-3 discounts">
+            <h3>Go Green</h3>
+            <div class="mb-4">
+                Genen Shouyu goes on sale very rarely. Order now to save 10% off our already low price!
+            </div>
+            <i>Discount expires: 2/25/2020</i><br />
+            <a href="#" class="code"><i class="far fa-hand-point-right"></i> Discount Code</a>
+        </div>
+        <div class="col-md m-3 p-3 discounts">
+            <h3>Half Price</h3>
+            <div class="mb-4">
+                Just because you can't pronounce "Schoggi Shokolade" doesn't mean you shouldn't buy it. Get it now for 50% off!
+            </div>
+            <i>Discount expires: 2/25/2020</i><br />
+            <a href="#" class="code"><i class="far fa-hand-point-right"></i> Discount Code</a>
         </div>
     </div>
 
@@ -64,6 +105,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <!-- bootstrap -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-
+    <!-- custom js-->
+    <script src="js/client.js"></script>
 </body>
 </html>
