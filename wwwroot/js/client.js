@@ -15,8 +15,16 @@ $(function () {
         toast.pause();
         // reset the audio
         toast.currentTime = 0;
+        $('#product').html($(this).data('product'));
+        $('#code').html($(this).data('code'));
         // play audio
         toast.play();
         $('#toast').toast({ autohide: false }).toast('show');
     });
+});
+
+$(document).on('keyup', function (e) {
+    if (e.key === "Escape") {
+        $('#toast').toast('hide');
+    }
 });
